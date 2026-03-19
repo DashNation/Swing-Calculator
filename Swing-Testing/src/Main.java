@@ -1,39 +1,53 @@
 
+import java.awt.*;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Window window = new Window("window", 500, 600);
+        int windowWidth = 500;
+        int windowHeight = 600;
+        Window window = new Window("Grid Test", windowWidth, windowHeight);
+        Layout gridbag = new Layout("gridbag");
+        window.getWindowPanel().setLayout(gridbag.getLayout());
+        GridBagConstraints gbc = gridbag.createGridBagConstraints();
 
-        TextField textField = new TextField("Test", window.getWidth() - 100, 50, false);
-        textField.setFontSize(30);
-        textField.setFontStyle("bold");
-        window.addComponent(textField.getTextField());
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 0.5;
+        Button button = new Button("1", 50, 50);
+        window.addComponent(button.getButton(), gbc);
 
-        TextField textField2 = new TextField("Test", window.getWidth() - 100, 50);
-        textField2.setFontSize(30);
-        textField2.setFontStyle("italic");
-        window.addComponent(textField2.getTextField());
+        gbc.gridx = 2;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 0.5;
+        Button button2 = new Button("2", 50, 50);
+        window.addComponent(button2.getButton(), gbc);
 
-        TextField textField3 = new TextField("Test", window.getWidth() - 100, 50);
-        textField3.setFontSize(30);
-        textField3.setFontStyle("plaint");
-        window.addComponent(textField3.getTextField());
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 4;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        Button button3 = new Button("3", 50, 50);
+        window.addComponent(button3.getButton(), gbc);
 
-        Button button = new Button("Click Me!", 200, 50);
-        button.onClick(() -> {
-            textField.getTextField().setText("buttonClick");
-            textField2.getTextField().setText("buttonClick");
-            textField3.getTextField().setText("buttonClick");
-        });
-        window.addComponent(button.getButton());
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 4;
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.anchor = GridBagConstraints.CENTER;
+        Label label = new Label("GridBagLayout works!", 100, 100);
+        window.addComponent(label.getLabel(), gbc);
 
-        Layout flowLayout = new Layout("flow");
-        window.getWindowPanel().setLayout(flowLayout.getLayout());
-
-        Label label = new Label("TestLabel", 100, 50);
-        window.addComponent(label.getLabel());
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.gridwidth = 4;
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.anchor = GridBagConstraints.CENTER;
+        Label label2 = new Label(":D", 100, 100);
+        window.addComponent(label2.getLabel(), gbc);
 
         window.setVisible(true);
-
     }
 }

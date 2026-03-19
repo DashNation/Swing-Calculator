@@ -21,6 +21,10 @@ public class Layout {
                 this.layoutType = layoutType;
                 layout = new BorderLayout();
                 break;
+            case "gridbag":
+                this.layoutType = layoutType;
+                layout = new GridBagLayout();
+                break;
             default:
                 layout = null;
                 this.layoutType = null;
@@ -139,6 +143,21 @@ public class Layout {
                     flow.setAlignment(FlowLayout.CENTER);
                     break;
             }
+        }
+    }
+
+    public GridBagConstraints createGridBagConstraints() {
+        if (!this.layoutType.equals("gridbag")) {
+            System.out.println("Layout has to be of type \"gridbag\" for this method to work!");
+        }
+
+        if (this.layout instanceof GridBagLayout) {
+            GridBagConstraints gbc = new GridBagConstraints();
+            return gbc;
+        } else {
+            System.out.println("Layout has to be of type \"gridbag\" for this method to work!");
+            System.out.println("Returning null!");
+            return null;
         }
     }
 }

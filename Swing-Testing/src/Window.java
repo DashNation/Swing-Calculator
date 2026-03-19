@@ -1,4 +1,5 @@
 
+import java.awt.GridBagConstraints;
 import javax.swing.*;
 
 public class Window {
@@ -51,6 +52,10 @@ public class Window {
 
     public void addComponent(JComponent comp) {
         windowPanel.add(comp);
+    }
+
+    public void addComponent(JComponent comp, GridBagConstraints gbc) {
+        windowPanel.add(comp, gbc);
     }
 
     public void update() {
