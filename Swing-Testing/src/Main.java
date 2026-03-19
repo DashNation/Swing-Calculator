@@ -14,7 +14,7 @@ public class Main {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 4;
-        gbc.gridheight = 2;
+        // gbc.gridheight = 2;
         gbc.weighty = 1;
         gbc.weightx = 1;
         gbc.fill = GridBagConstraints.BOTH;
@@ -24,7 +24,6 @@ public class Main {
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.gridwidth = 1;
-        gbc.gridheight = 1;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5;
         Button cBtn = new Button("C", 50, 50);

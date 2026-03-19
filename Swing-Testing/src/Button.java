@@ -62,4 +62,12 @@ public class Button {
         button.setLocation(x, y);
     }
 
+    public void setBorderPainted(boolean isBorderActive) {
+        if (isBorderActive) {
+            button.setBorderPainted(isBorderActive);
+        } else {
+            button.setBorderPainted(isBorderActive);
+        }
+    }
+
 }
