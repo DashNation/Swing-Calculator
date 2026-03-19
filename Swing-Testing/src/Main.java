@@ -27,6 +27,9 @@ public class Main {
         });
         window.addComponent(button.getButton());
 
+        Layout flowLayout = new Layout("flow");
+        window.getWindowPanel().setLayout(flowLayout.getLayout());
+
         Label label = new Label("TestLabel", 100, 50);
         window.addComponent(label.getLabel());
 

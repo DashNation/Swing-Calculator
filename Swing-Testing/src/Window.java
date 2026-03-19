@@ -33,6 +33,14 @@ public class Window {
         return windowName;
     }
 
+    public JFrame getWindow() {
+        return window;
+    }
+
+    public JPanel getWindowPanel() {
+        return windowPanel;
+    }
+
     public void setVisible(boolean isVisible) {
         window.setVisible(isVisible);
     }
@@ -43,5 +51,10 @@ public class Window {
 
     public void addComponent(JComponent comp) {
         windowPanel.add(comp);
+    }
+
+    public void update() {
+        windowPanel.revalidate();
+        windowPanel.repaint();
     }
 }
