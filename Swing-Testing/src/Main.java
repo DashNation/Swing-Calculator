@@ -96,9 +96,9 @@ public class Main {
         gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5;
-        Button multiBtn = new Button("X", 50, 50);
+        Button multiBtn = new Button("x", 50, 50);
         multiBtn.onClick(() -> {
-            calculator.addValueToNumDisplay("X", numDisplay.getTextField());
+            calculator.addValueToNumDisplay("x", numDisplay.getTextField());
         });
         window.addComponent(multiBtn.getButton(), gbc);
 
@@ -200,7 +200,7 @@ public class Main {
         gbc.weightx = 0.5;
         Button dotBtn = new Button(".", 50, 50);
         dotBtn.onClick(() -> {
-            calculator.addValueToNumDisplay(".", numDisplay.getTextField());
+            calculator.addValueToNumDisplay(".", numDisplay.getTextField(), true);
         });
         window.addComponent(dotBtn.getButton(), gbc);
 
@@ -210,6 +210,9 @@ public class Main {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5;
         Button equalBtn = new Button("=", 50, 50);
+        equalBtn.onClick(() -> {
+            calculator.addValueToNumDisplay(".", numDisplay.getTextField(), false);
+        });
         window.addComponent(equalBtn.getButton(), gbc);
 
         window.setVisible(true);

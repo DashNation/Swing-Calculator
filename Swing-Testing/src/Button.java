@@ -47,6 +47,10 @@ public class Button {
         return button;
     }
 
+    public Runnable getOnClick() {
+        return onClick;
+    }
+
     public void onClick(Runnable onClick) {
         this.onClick = onClick;
         button.addActionListener(e -> {
