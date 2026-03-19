@@ -61,6 +61,10 @@ public class TextField {
         return textField;
     }
 
+    public int getFontSize() {
+        return fontSize;
+    }
+
     public Font getFont() {
         return font;
     }
@@ -100,5 +104,13 @@ public class TextField {
 
     public void setLocation(int x, int y) {
         textField.setLocation(x, y);
+    }
+
+    public boolean isEditable() {
+        return isEditable;
+    }
+
+    public void setEditable(boolean isEditable) {
+        this.isEditable = isEditable;
     }
 }
