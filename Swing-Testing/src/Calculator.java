@@ -1,12 +1,16 @@
 
+import java.util.*;
 import javax.swing.JTextField;
 
 public class Calculator {
 
     private boolean hasDotBeenPressed = false;
+    private final List<Float> values;
+    private final List<String> operators;
 
     public Calculator() {
-
+        values = new ArrayList<>();
+        operators = new ArrayList<>();
     }
 
     public boolean isHasDotBeenPressed() {
@@ -23,21 +27,6 @@ public class Calculator {
         String currentValue = numDisplay.getText();
         String newValue = currentValue + value;
         System.out.println(newValue);
-        numDisplay.setText(newValue);
-        if (value.equals(".")) {
-            this.hasDotBeenPressed = true;
-        }
-    }
-
-    public void addValueToNumDisplay(Object value, JTextField numDisplay, boolean hasDotBeenPressed) {
-        if (this.hasDotBeenPressed && value.equals(".")) {
-            return;
-        }
-        if (value.equals("+") || value.equals("-") || value.equals("x") || value.equals("÷")) {
-            this.hasDotBeenPressed = false;
-        }
-        String currentValue = numDisplay.getText();
-        String newValue = currentValue + value;
         numDisplay.setText(newValue);
         if (value.equals(".")) {
             this.hasDotBeenPressed = true;

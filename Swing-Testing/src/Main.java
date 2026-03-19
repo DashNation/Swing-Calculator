@@ -200,7 +200,7 @@ public class Main {
         gbc.weightx = 0.5;
         Button dotBtn = new Button(".", 50, 50);
         dotBtn.onClick(() -> {
-            calculator.addValueToNumDisplay(".", numDisplay.getTextField(), true);
+            calculator.addValueToNumDisplay(".", numDisplay.getTextField());
         });
         window.addComponent(dotBtn.getButton(), gbc);
 
@@ -211,7 +211,7 @@ public class Main {
         gbc.weightx = 0.5;
         Button equalBtn = new Button("=", 50, 50);
         equalBtn.onClick(() -> {
-            calculator.addValueToNumDisplay(".", numDisplay.getTextField(), false);
+            calculator.addValueToNumDisplay(".", numDisplay.getTextField());
         });
         window.addComponent(equalBtn.getButton(), gbc);
 
