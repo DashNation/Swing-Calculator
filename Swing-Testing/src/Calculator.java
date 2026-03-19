@@ -49,4 +49,13 @@ public class Calculator {
     public void calculate() {
         this.hasDotBeenPressed = false;
     }
+
+    public void readArrayLists() {
+        for (int i = 0; i < values.size(); i++) {
+            System.out.println("Values-Arraylist: " + values.get(i));
+        }
+        for (int i = 0; i < operators.size(); i++) {
+            System.out.println("Operators-Arraylist: " + values.get(i));
+        }
+    }
 }
