@@ -51,7 +51,7 @@ public class Main {
         gbc.weightx = 0.5;
         Button invertBtn = new Button("-/+", 50, 50);
         invertBtn.onClick(() -> {
-            calculator.inverNumber(numDisplay.getTextField());
+            calculator.invertNumber(numDisplay.getTextField());
         });
         window.addComponent(invertBtn.getButton(), gbc);
 

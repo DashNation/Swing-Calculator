@@ -63,7 +63,7 @@ public class Calculator {
         System.out.println(" ");
     }
 
-    public void inverNumber(JTextField numDisplay) {
+    public void invertNumber(JTextField numDisplay) {
         if (!isFloat(numDisplay.getText())) {
             System.out.println("Invalid invert value!");
             return;
@@ -72,7 +72,7 @@ public class Calculator {
         float numValue = Float.parseFloat(textValue);
         numValue = -numValue;
 
-        String operator = numValue >= 0 ? "+" : "-";
+        String operator = numValue >= 0 ? "" : "-";
         float absValue = Math.abs(numValue);
         DecimalFormat df = new DecimalFormat("0.#");
         String result = df.format(absValue);
