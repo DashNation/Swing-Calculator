@@ -20,9 +20,8 @@ public class Button {
         button.setFont(new Font("Arial", Font.PLAIN, 30));
         button.setFocusPainted(false);
 
-        setBackground("#000");
-        setForeground("#ff0000");
-        setLineBorder("#ff0000", 3);
+        setBackground("#201927");
+        setLineBorder("#b980ff", 3);
     }
 
     public String getText() {

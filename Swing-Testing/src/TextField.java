@@ -32,10 +32,10 @@ public class TextField {
         textField = new JTextField(text);
         textField.setPreferredSize(new Dimension(width, height));
         textField.setEditable(isEditable);
-        setBackground("#000");
-        setForeground("#ff0000");
+        setBackground("#201927");
+        setForeground("#b980ff");
         disableBorder(true);
-        setLineBorder("#ff0000", 3);
+        setLineBorder("#b980ff", 3);
     }
 
     public String getText() {
