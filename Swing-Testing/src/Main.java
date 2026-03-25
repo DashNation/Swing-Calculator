@@ -213,7 +213,7 @@ public class Main {
         equalBtn.onClick(() -> {
             System.out.println("Equals was been pressed!");
             // calculator.readArrayLists();
-            calculator.calculateResult();
+            calculator.calculateResult(numDisplay.getTextField());
         });
         window.addComponent(equalBtn.getButton(), gbc);
 

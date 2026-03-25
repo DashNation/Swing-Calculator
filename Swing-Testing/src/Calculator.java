@@ -33,6 +33,7 @@ public class Calculator {
 
     public void clear(JTextField numDisplay) {
         this.hasDotBeenPressed = false;
+        values.clear();
         numDisplay.setText("");
     }
 
@@ -55,15 +56,67 @@ public class Calculator {
         }
     }
 
-    public void calculateResult() {
+    public void calculateResult(JTextField numDisplay) {
+        List<String> numbers = new ArrayList<>();
+        List<String> equation = new ArrayList<>();
+
         System.out.println("Calculate Result:");
         for (int i = 0; i < values.size(); i++) {
-            try {
-                float num = Float.parseFloat(values.get(i));
-                System.out.println("Float: " + values.get(i));
-            } catch (Exception e) {
-                System.out.println(values.get(i));
+            String val = values.get(i);
+            if (val.matches("[0-9.]")) {
+                numbers.add(val);
+                System.out.println("Float: " + val);
+            } else {
+                if (!numbers.isEmpty()) {
+                    String number = String.join("", numbers);
+                    System.out.println("NumberGroup: " + Float.valueOf(number));
+                    equation.add(number);
+                    numbers.clear();
+                }
+                System.out.println(val);
+                equation.add(val);
             }
         }
+
+        if (!numbers.isEmpty()) {
+            String number = String.join("", numbers);
+            System.out.println("NumberGroup: " + Float.valueOf(number));
+            equation.add(number);
+            numbers.clear();
+        }
+
+        float result = 0;
+        String operator = "";
+
+        for (int j = 0; j < equation.size(); j++) {
+            String token = equation.get(j);
+            if (token.matches("[0-9.]+")) {
+                float num = Float.parseFloat(token);
+                if (operator.isEmpty()) {
+                    result = num;
+                } else {
+                    switch (operator) {
+                        case "+":
+                            result += num;
+                            break;
+                        case "-":
+                            result -= num;
+                            break;
+                        case "x":
+                            result *= num;
+                            break;
+                        case "÷":
+                            result /= num;
+                            break;
+                    }
+                    operator = ""; // Operator zurücksetzen
+                }
+            } else { // Operator
+                operator = token;
+            }
+        }
+
+        System.out.println("Result: " + result);
+        numDisplay.setText(String.valueOf(result));
     }
 }
