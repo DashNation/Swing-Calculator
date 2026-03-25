@@ -60,12 +60,18 @@ public class Calculator {
     }
 
     public void inverNumber(JTextField numDisplay) {
+        if (!isFloat(numDisplay.getText())) {
+            return;
+        }
         String textValue = numDisplay.getText();
         float numValue = Float.parseFloat(textValue);
         numValue = numValue * (-1);
         DecimalFormat df = new DecimalFormat("0.#");
         String result = df.format(numValue);
+        int valuesLength = values.size() - 1;
+        values.set(valuesLength, result);
         numDisplay.setText(result);
+        readArrayLists();
     }
 
     public void calculateResult(JTextField numDisplay) {
@@ -131,5 +137,17 @@ public class Calculator {
 
         System.out.println("Result: " + result);
         numDisplay.setText(String.valueOf(df.format(result)));
+    }
+
+    private boolean isFloat(String str) {
+        if (str == null) {
+            return false;
+        }
+        try {
+            Float.parseFloat(str);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
