@@ -1,4 +1,5 @@
 
+import java.text.DecimalFormat;
 import java.util.*;
 import javax.swing.JTextField;
 
@@ -88,6 +89,7 @@ public class Calculator {
         float result = 0;
         String operator = "";
 
+        DecimalFormat df = new DecimalFormat("0.#");
         for (int j = 0; j < equation.size(); j++) {
             String token = equation.get(j);
             if (token.matches("[0-9.]+")) {
@@ -97,7 +99,6 @@ public class Calculator {
                 } else {
                     switch (operator) {
                         case "+":
-                            result += num;
                             break;
                         case "-":
                             result -= num;
@@ -117,6 +118,6 @@ public class Calculator {
         }
 
         System.out.println("Result: " + result);
-        numDisplay.setText(String.valueOf(result));
+        numDisplay.setText(String.valueOf(df.format(result)));
     }
 }
