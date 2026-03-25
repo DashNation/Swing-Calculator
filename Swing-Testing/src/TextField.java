@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.*;
@@ -31,6 +32,10 @@ public class TextField {
         textField = new JTextField(text);
         textField.setPreferredSize(new Dimension(width, height));
         textField.setEditable(isEditable);
+        setBackground("#000");
+        setForeground("#ff0000");
+        disableBorder(true);
+        setLineBorder("#ff0000", 3);
     }
 
     public String getText() {
@@ -112,5 +117,43 @@ public class TextField {
 
     public void setEditable(boolean isEditable) {
         this.isEditable = isEditable;
+    }
+
+    public void setBackground(String hexColor) {
+        if (hexColor.length() - 1 <= 6) {
+            textField.setBackground(Color.decode(hexColor));
+        } else {
+            System.out.println("HexCode needs to have a maxmimum character amount of 6");
+        }
+    }
+
+    public void setForeground(String hexColor) {
+        if (hexColor.length() - 1 <= 6) {
+            textField.setForeground(Color.decode(hexColor));
+        } else {
+            System.out.println("HexCode needs to have a maxmimum character amount of 6");
+        }
+    }
+
+    public void setLineBorder(String hexColor, int thickness) {
+        if (hexColor.length() - 1 <= 6) {
+            if (thickness == 0) {
+                thickness = 0;
+            }
+            textField.setForeground(Color.decode(hexColor));
+            textField.setBorder(BorderFactory.createLineBorder(Color.decode(hexColor), thickness));
+        } else {
+            System.out.println("HexCode needs to have a maxmimum character amount of 6");
+        }
+    }
+
+    public void padding(int top, int left, int bottom, int right) {
+        textField.setBorder(BorderFactory.createEmptyBorder(top, left, bottom, right));
+    }
+
+    public void disableBorder(boolean isDisabled) {
+        if (isDisabled) {
+            textField.setBorder(BorderFactory.createEmptyBorder());
+        }
     }
 }

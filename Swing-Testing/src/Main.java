@@ -220,6 +220,7 @@ public class Main {
         });
         window.addComponent(equalBtn.getButton(), gbc);
 
+        window.setBackground("#000");
         window.setVisible(true);
     }
 }

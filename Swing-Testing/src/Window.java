@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import javax.swing.*;
 
@@ -61,5 +62,25 @@ public class Window {
     public void update() {
         windowPanel.revalidate();
         windowPanel.repaint();
+    }
+
+    public void setBackground(String hexColor) {
+        if (hexColor.length() - 1 <= 6) {
+            windowPanel.setBackground(Color.decode(hexColor));
+        } else {
+            System.out.println("HexCode needs to have a maxmimum character amount of 6");
+        }
+    }
+
+    public void setTransparent(boolean isTransparent) {
+        windowPanel.setOpaque(!isTransparent);
+    }
+
+    public void createLineBorder(String hexColor, int thickness) {
+        if (hexColor.length() - 1 <= 6) {
+            windowPanel.setBorder(BorderFactory.createLineBorder(Color.decode(hexColor), thickness));
+        } else {
+            System.out.println("HexCode needs to have a maxmimum character amount of 6");
+        }
     }
 }
