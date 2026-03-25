@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         int windowWidth = 500;
         int windowHeight = 600;
-        Window window = new Window("Grid Test", windowWidth, windowHeight);
+        Window window = new Window("Swing Calculator", windowWidth, windowHeight);
         Layout gridbag = new Layout("gridbag");
         window.getWindowPanel().setLayout(gridbag.getLayout());
         GridBagConstraints gbc = gridbag.createGridBagConstraints();
@@ -49,8 +49,11 @@ public class Main {
         gbc.gridx = 2;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5;
-        Button percentBtn = new Button("%", 50, 50);
-        window.addComponent(percentBtn.getButton(), gbc);
+        Button invertBtn = new Button("-/+", 50, 50);
+        invertBtn.onClick(() -> {
+            calculator.inverNumber(numDisplay.getTextField());
+        });
+        window.addComponent(invertBtn.getButton(), gbc);
 
         gbc.gridx = 3;
         gbc.gridy = 1;

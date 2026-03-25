@@ -59,6 +59,15 @@ public class Calculator {
         }
     }
 
+    public void inverNumber(JTextField numDisplay) {
+        String textValue = numDisplay.getText();
+        float numValue = Float.parseFloat(textValue);
+        numValue = numValue * (-1);
+        DecimalFormat df = new DecimalFormat("0.#");
+        String result = df.format(numValue);
+        numDisplay.setText(result);
+    }
+
     public void calculateResult(JTextField numDisplay) {
         List<String> numbers = new ArrayList<>();
         List<String> equation = new ArrayList<>();
