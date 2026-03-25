@@ -17,7 +17,7 @@ public class Calculator {
     }
 
     public void addValueToNumDisplay(Object value, JTextField numDisplay) {
-        if (this.hasDotBeenPressed && value.equals(".")) {
+        if (this.hasDotBeenPressed && value.equals(",")) {
             return;
         }
         if (value.equals("+") || value.equals("-") || value.equals("x") || value.equals("÷")) {
@@ -28,7 +28,7 @@ public class Calculator {
         String newValue = currentValue + value;
         System.out.println("New-Value: " + newValue);
         numDisplay.setText(newValue);
-        if (value.equals(".")) {
+        if (value.equals(",")) {
             this.hasDotBeenPressed = true;
         }
 
@@ -63,7 +63,6 @@ public class Calculator {
         System.out.println(" ");
     }
 
-    // TODO: Add that the operator and number a split in the array list {-, 1} // {+, 1}
     public void inverNumber(JTextField numDisplay) {
         if (!isFloat(numDisplay.getText())) {
             System.out.println("Invalid invert value!");

@@ -201,9 +201,9 @@ public class Main {
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5;
-        Button dotBtn = new Button(".", 50, 50);
+        Button dotBtn = new Button(",", 50, 50);
         dotBtn.onClick(() -> {
-            calculator.addValueToNumDisplay(".", numDisplay.getTextField());
+            calculator.addValueToNumDisplay(",", numDisplay.getTextField());
         });
         window.addComponent(dotBtn.getButton(), gbc);
 
