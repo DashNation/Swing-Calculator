@@ -23,15 +23,12 @@ public class Calculator {
         if (value.equals("+") || value.equals("-") || value.equals("x") || value.equals("÷")) {
             this.hasDotBeenPressed = false;
         }
-        System.out.println("Before adding value");
         if (value.equals(",") && values.isEmpty()) {
             values.add(String.valueOf(0));
             values.add(String.valueOf("."));
         } else {
             values.add(String.valueOf(value));
         }
-        readArrayLists();
-        System.out.println("After adding value");
         String currentValue = numDisplay.getText();
         String newValue = currentValue + value;
         System.out.println("New-Value: " + newValue);
