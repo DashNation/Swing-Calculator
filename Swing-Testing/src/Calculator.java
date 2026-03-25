@@ -42,6 +42,8 @@ public class Calculator {
         String value = numDisplay.getText();
         if (value != null && value.length() > 0) {
             value = value.substring(0, value.length() - 1);
+            values.clear();
+            values.add(value);
             numDisplay.setText(value);
         }
     }
@@ -99,6 +101,7 @@ public class Calculator {
                 } else {
                     switch (operator) {
                         case "+":
+                            result += num;
                             break;
                         case "-":
                             result -= num;
