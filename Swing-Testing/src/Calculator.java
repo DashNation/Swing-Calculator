@@ -5,12 +5,10 @@ import javax.swing.JTextField;
 public class Calculator {
 
     private boolean hasDotBeenPressed = false;
-    private final List<Float> values;
-    private final List<String> operators;
+    private final List<String> values;
 
     public Calculator() {
         values = new ArrayList<>();
-        operators = new ArrayList<>();
     }
 
     public boolean isHasDotBeenPressed() {
@@ -24,9 +22,9 @@ public class Calculator {
         if (value.equals("+") || value.equals("-") || value.equals("x") || value.equals("÷")) {
             this.hasDotBeenPressed = false;
         }
+        values.add(String.valueOf(value));
         String currentValue = numDisplay.getText();
         String newValue = currentValue + value;
-        System.out.println(newValue);
         numDisplay.setText(newValue);
         if (value.equals(".")) {
             this.hasDotBeenPressed = true;
@@ -51,11 +49,21 @@ public class Calculator {
     }
 
     public void readArrayLists() {
+        System.out.println("--Values-Arraylist--");
         for (int i = 0; i < values.size(); i++) {
-            System.out.println("Values-Arraylist: " + values.get(i));
+            System.out.print(values.get(i));
         }
-        for (int i = 0; i < operators.size(); i++) {
-            System.out.println("Operators-Arraylist: " + values.get(i));
+    }
+
+    public void calculateResult() {
+        System.out.println("Calculate Result:");
+        for (int i = 0; i < values.size(); i++) {
+            try {
+                float num = Float.parseFloat(values.get(i));
+                System.out.println("Float: " + values.get(i));
+            } catch (Exception e) {
+                System.out.println(values.get(i));
+            }
         }
     }
 }

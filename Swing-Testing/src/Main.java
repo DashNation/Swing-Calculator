@@ -211,7 +211,9 @@ public class Main {
         gbc.weightx = 0.5;
         Button equalBtn = new Button("=", 50, 50);
         equalBtn.onClick(() -> {
-            calculator.addValueToNumDisplay(".", numDisplay.getTextField());
+            System.out.println("Equals was been pressed!");
+            // calculator.readArrayLists();
+            calculator.calculateResult();
         });
         window.addComponent(equalBtn.getButton(), gbc);
 
