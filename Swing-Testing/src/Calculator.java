@@ -26,10 +26,13 @@ public class Calculator {
         values.add(String.valueOf(value));
         String currentValue = numDisplay.getText();
         String newValue = currentValue + value;
+        System.out.println("New-Value: " + newValue);
         numDisplay.setText(newValue);
         if (value.equals(".")) {
             this.hasDotBeenPressed = true;
         }
+
+        readArrayLists();
     }
 
     public void clear(JTextField numDisplay) {
@@ -57,20 +60,35 @@ public class Calculator {
         for (int i = 0; i < values.size(); i++) {
             System.out.print(values.get(i));
         }
+        System.out.println(" ");
     }
 
+    // TODO: Add that the operator and number a split in the array list {-, 1} // {+, 1}
     public void inverNumber(JTextField numDisplay) {
         if (!isFloat(numDisplay.getText())) {
+            System.out.println("Invalid invert value!");
             return;
         }
         String textValue = numDisplay.getText();
         float numValue = Float.parseFloat(textValue);
-        numValue = numValue * (-1);
+        numValue = -numValue;
+
+        String operator = numValue >= 0 ? "+" : "-";
+        float absValue = Math.abs(numValue);
         DecimalFormat df = new DecimalFormat("0.#");
-        String result = df.format(numValue);
+        String result = df.format(absValue);
+
         int valuesLength = values.size() - 1;
-        values.set(valuesLength, result);
-        numDisplay.setText(result);
+
+        System.out.println("Before");
+        readArrayLists();
+
+        values.set(valuesLength, operator);
+        values.add(result);
+
+        numDisplay.setText(operator + result);
+
+        System.out.println("After");
         readArrayLists();
     }
 
@@ -144,7 +162,7 @@ public class Calculator {
             return false;
         }
         try {
-            Float.parseFloat(str);
+            Float.valueOf(str);
             return true;
         } catch (Exception e) {
             return false;
