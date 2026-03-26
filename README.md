@@ -32,8 +32,8 @@
 
 1. Open the project in your IDE
 2. Run Main.java
-    > Terminal: ```Java src/main.java```
-    > Extension: Navigate to the `src`folder. Right click `Main.Java`, and then click `Run Java` on the *context menu*
+    > - Terminal: ```Java src/main.java```
+    > - Extension: Navigate to the `src`folder. Right click `Main.Java`, and then click `Run Java` on the *context menu*
 3. Have fun using it even tho its a calculator
 </div>
 
