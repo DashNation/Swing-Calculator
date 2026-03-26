@@ -18,7 +18,7 @@
 > *https://www.oracle.com/java/technologies/downloads/#jdk26-windows*
 
 <u> IDE Info: </u>
-> *Use any IDE that can run java (I used VScode with the "Extension Pack for Java")*
+> *Use any IDE that can run java (I used VSCode with the "Extension Pack for Java")*
 > *https://code.visualstudio.com/download*
 > *https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack*
 
