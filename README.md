@@ -42,7 +42,6 @@
 ## KEYBINDS
 </u>
 
-<div style="border: 1px solid blue; background-color: #d8d1ff; color: #2c1c72; padding: 10px; padding-left: 30px; border-radius: 5px;>
 
 - **" 0-9 "** and **"."** for **numbers**
 - **" + "** for **addition**
@@ -53,7 +52,6 @@
 - **" Esc "** for **clearing** the calculator 
 - **" I "** to **invert** the **current number**
 - **" Enter "** to calculate the **result**
-</div>
 
 <u>
 
@@ -62,13 +60,11 @@
 
 
 *Each element can be costumized using the following methods:*
-<div style="border: 1px solid purple; background-color: #e8d1ff; color: #691c72; padding: 10px; padding-left: 30px; border-radius: 5px;>
 
 - **setBackground(String hexColor)**
 - **setForeground(String hexColor)**
 - **setLineBorder(String hexColor, int thickness)**
 - **padding(int top, int left, int bottom, int right)**
-</div>
 
 <div style="height: 20px"></div>
 
