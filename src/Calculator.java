@@ -31,7 +31,6 @@ public class Calculator {
         }
         String currentValue = numDisplay.getText();
         String newValue = currentValue + value;
-        System.out.println("New-Value: " + newValue);
         numDisplay.setText(newValue);
         if (value.equals(",")) {
             this.hasDotBeenPressed = true;
@@ -84,7 +83,6 @@ public class Calculator {
 
         int valuesLength = values.size() - 1;
 
-        System.out.println("Before");
         readArrayLists();
 
         values.set(valuesLength, operator);
@@ -92,7 +90,6 @@ public class Calculator {
 
         numDisplay.setText(operator + result);
 
-        System.out.println("After");
         readArrayLists();
     }
 
@@ -103,6 +100,7 @@ public class Calculator {
         System.out.println("Calculate Result:");
         for (int i = 0; i < values.size(); i++) {
             String val = values.get(i);
+            val = val.replaceAll(",", ".");
             if (val.matches("[0-9.]")) {
                 numbers.add(val);
                 System.out.println("Float: " + val);
