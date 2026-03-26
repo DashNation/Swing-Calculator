@@ -10,7 +10,7 @@
 > *https://github.com/DashNation/Swing-Testing/archive/refs/heads/main.zip*
 > - Clone the repository
 > ```git 
-> git clone https://github.com/DashNation/Swing-Testing.git 
+>$ git clone https://github.com/DashNation/Swing-Testing.git 
 > ```
 
 <u> Get JAVA: </u>
