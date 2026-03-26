@@ -74,5 +74,6 @@
 </u>
 
 ### *Default look:* 
-<img src="image-1.png" style="border-style: none; border-radius: 20px; border: 3px #e5d0ff solid; box-shadow: 0px 0px 15px -5px black "></img>
- *Remember you can change its looks with the few styling functions in this project*
+<img src="image-1.png" style="width: 400px; height: 500px; border-style: none; border-radius: 20px; border: 3px #e5d0ff solid; box-shadow: 0px 0px 15px -5px black "></img>
+
+ > *Remember you can change its looks with the few styling functions in this project*
