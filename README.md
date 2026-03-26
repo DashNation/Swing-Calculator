@@ -59,7 +59,7 @@
 </u>
 
 
-*Each element can be costumized using the following methods:*
+*Each element can be costumized using the following methods/functions:*
 
 - **setBackground(String hexColor)**
 - **setForeground(String hexColor)**
