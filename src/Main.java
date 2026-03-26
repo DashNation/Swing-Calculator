@@ -214,7 +214,7 @@ public class Main {
         am.put("5", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calculator.addValueToNumDisplay(4, numDisplay.getTextField());
+                calculator.addValueToNumDisplay(5, numDisplay.getTextField());
             }
         });
 
@@ -233,7 +233,7 @@ public class Main {
         am.put("6", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                calculator.addValueToNumDisplay(4, numDisplay.getTextField());
+                calculator.addValueToNumDisplay(6, numDisplay.getTextField());
             }
         });
 
