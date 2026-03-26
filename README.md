@@ -5,6 +5,14 @@
 
 <div style="padding: 10px; border: 1px grey solid; border-radius: 5px; padding-top: 20px; background-color: #00000000;">
 
+<u>Get Repository</u>
+> - Download the ZIP
+> *https://github.com/DashNation/Swing-Testing/archive/refs/heads/main.zip*
+> - Clone the repository
+> ```git 
+> git clone https://github.com/DashNation/Swing-Testing.git 
+> ```
+
 <u> Get JAVA: </u>
 > *Download the newest version of the JAVA-SDK:*
 > *https://www.oracle.com/java/technologies/downloads/#jdk26-windows*
@@ -76,4 +84,4 @@
 ### *Default look:* 
 <img src="image-1.png" style="width: 400px; height: 500px; border-style: none; border-radius: 20px; border: 3px #e5d0ff solid; box-shadow: 0px 0px 15px -5px black "></img>
 
- > *Remember you can change its looks with the few styling functions in this project*
+ > *Remember you can change its looks with the few styling functions the project*
