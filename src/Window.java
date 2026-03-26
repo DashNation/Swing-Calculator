@@ -43,6 +43,10 @@ public class Window {
         return windowPanel;
     }
 
+    public JRootPane getRootPane() {
+        return window.getRootPane();
+    }
+
     public void setVisible(boolean isVisible) {
         window.setVisible(isVisible);
     }

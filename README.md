@@ -1,18 +1,78 @@
-## Getting Started
+<u>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## INSTALLATION
+</u>
 
-## Folder Structure
+<div style="padding: 10px; border: 1px grey solid; border-radius: 5px; padding-top: 20px; background-color: #00000000;">
 
-The workspace contains two folders by default, where:
+<u> Get JAVA: </u>
+> *Download the newest version of the JAVA-SDK:*
+> *https://www.oracle.com/java/technologies/downloads/#jdk26-windows*
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+<u> IDE Info: </u>
+> *Use any IDE that can run java (I used VScode with the "Extension Pack for Java")*
+> *https://code.visualstudio.com/download*
+> *https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack*
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+</div>
+<u>
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## IDE SETUP
+</u>
 
-## Dependency Management
+<div style="padding: 10px; border: 1px black solid; border-radius: 5px; padding-top: 20px;">
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Open the project in your IDE
+2. Run Main.java
+3. Have fun using it even tho its a calculator
+</div>
+
+<u>
+
+## KEYBINDS
+</u>
+
+<div style="border: 1px solid blue; background-color: #d8d1ff; color: #2c1c72; padding: 10px; padding-left: 30px; border-radius: 5px;>
+
+- **" 0-9 "** and **"."** for **numbers**
+- **" + "** for **addition**
+- **"-"** for **substration**
+- **" * "** for **multiplication**
+- **" / "** for **dividing**
+- **" Backspace "** to **delete** the **last number** on the screen
+- **" Esc "** for **clearing** the calculator 
+- **" I "** to **invert** the **current number**
+- **" Enter "** to calculate the **result**
+</div>
+
+<u>
+
+## Costumization
+</u>
+
+
+*Each element can be costumized using the following methods:*
+<div style="border: 1px solid purple; background-color: #e8d1ff; color: #691c72; padding: 10px; padding-left: 30px; border-radius: 5px;>
+
+- **setBackground(String hexColor)**
+- **setForeground(String hexColor)**
+- **setLineBorder(String hexColor, int thickness)**
+- **padding(int top, int left, int bottom, int right)**
+</div>
+
+<div style="height: 20px"></div>
+
+<div style="border: 1px solid red; background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px;">
+<strong>⚠️ DISCLAIMER: </strong> Some of the methods above might not work for some components
+</div>
+
+<u>
+
+<div style="height: 20px"></div>
+
+## CALCULATOR LOOKS
+</u>
+
+### *Default look:* 
+<img src="image-1.png" style="border-style: none; border-radius: 20px; border: 3px #e5d0ff solid; box-shadow: 0px 0px 15px -5px black "></img>
+ *Remember you can change its looks with the few styling functions in this project*
